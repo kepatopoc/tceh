@@ -33,7 +33,7 @@ else:
     
 
 
-# In[9]:
+
 
 while True:
     user_input = input_function('\nВопрос 2: Какой тип будет у переменной a = sys.maxsize + 1 в Python 2.7? \nВаш ответ: ')
@@ -54,10 +54,10 @@ else:
     print("Повтори первую лекцию или посмотри различия 2.7 от 3 через гугл")
 
 
-a = 'World'
+
 
 while True:
-    user_input = input_function('\nВопрос 3: Какое слово получится если \na = "World" \nc = a[3]+a[1:2]+a[-1] ? \nВаш ответ: ')
+    user_input = input_function('\nВопрос 3: Чему будет равна переменная "с" если \na = "World" \nc = a[3]+a[1:2]+a[-1] ? \nВаш ответ: ')
     if str(user_input) == "lord" :
         print('\nВерно! ')
         Score = Score + 1
@@ -69,12 +69,28 @@ while True:
         print('Попыток: %s \n' % Score)
         continue 
 
-# In[ ]:
+while True:
+    user_input = input_function('\nВопрос 4: чему будет равно а = int("100"*2)/2? \nВаш ответ: ')
+    if str(user_input) == "50050" :
+        print('\n%s - это правильный ответ! ' % user_input)
+        Score = Score + 1
+        print('Попыток: %s' % Score)
+        break
+    else:
+        print('\n%s - это неправильно! Попробуй еще раз' % user_input)
+        Score = Score + 1
+        print('Попыток: %s \n' % Score)
+        continue 
+
+if Score == 4:
+    print('Поздравляю! Ты ответил на все вопросы c первого раза!!! Пора осваивать вторую лекцию! \nОбщее количество попыток %s' % Score)
+elif Score > 4 and Score < 8:
+    print("Ты справился с моими вопросами за %s попопыток. \nРекомендую пробежаться по первой лекции" % Score)
+else:
+    print("Повтори первую лекцию или посмотри различия 2.7 от 3 через гугл")
 
 
 
-print('Поздравляю! Ты ответил на все вопросы \nОбщее количество попыток %s' % Score)
-# In[ ]:
 
 
 
